@@ -1,0 +1,24 @@
+{
+  "name": "proyecto-fotaza-2",
+  "version": "1.0.0",
+  "description": "En este proyecto se debera crear una aplicacion web , la cual se llamara \"Fotaza 2\" , en la cual el usuario podra almacenar, ordenar, buscar, vender y\r compartir fotografías en línea, a través de Internet. Usando un modelo de aplicacion parecido a pinterest , Instagram o aplicaciones similares.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lautaro-10/Proyecto-Fotaza-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lautaro-10/Proyecto-Fotaza-2/issues"
+  },
+  "homepage": "https://github.com/Lautaro-10/Proyecto-Fotaza-2#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "pug": "^3.0.4"
+  }
+}
