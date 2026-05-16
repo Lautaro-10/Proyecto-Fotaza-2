@@ -4,7 +4,7 @@
   "description": "En este proyecto se debera crear una aplicacion web , la cual se llamara \"Fotaza 2\" , en la cual el usuario podra almacenar, ordenar, buscar, vender y\r compartir fotografías en línea, a través de Internet. Usando un modelo de aplicacion parecido a pinterest , Instagram o aplicaciones similares.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node --watch app.js"
   },
   "repository": {
     "type": "git",

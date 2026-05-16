@@ -1,18 +1,97 @@
-!DOCTYPE html
-html lang="es"
-head
-  meta charset="UTF-8"
-  meta name="viewport" content="width=device-width, initial-scale=1.0"
-  title Pagina Principal
-  link rel="stylesheet" href="/styles/estilosIndex.css"
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Fotaza - Descubre y Comparte Fotos Increíbles
+    // Google Fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet")
+    // Phosphor Icons
+    script(src="https://unpkg.com/@phosphor-icons/web")
+    // Custom CSS
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    header.header
+      a.logo(href="/") Fotaza.
+      nav.nav-links
+        a.nav-link(href="#") Mis fotos
+        a.nav-link(href="#") Quiénes Somos
+        a.nav-link(href="#") Seguidores
+      button#theme-toggle.theme-toggle(aria-label="Cambiar tema")
+        i.ph.ph-moon
+        
+    main
+      section.hero.animate-fade-in
+        h1 Captura el momento, comparte la magia.
+        p Únete a la comunidad de fotografía más vibrante. Explora, inspírate y muestra tu talento al mundo.
+        a.btn-primary(href="#") Empezar a explorar
+        
+      section.gallery-container.animate-fade-in.delay-1
+        div.masonry-grid
 
-body
-  header id="titulo-principal" Fotaza 2<nav id="titulo-principal-nav">Mis fotos Quienes Somos Seguidores 
-  hr
-  main style="background-color: rgb(180, 172, 172); color: white;"
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum libero facilis illum voluptatibus ratione, pariatur impedit accusamus. Sed perspiciatis laudantium, cum labore veniam fugiat vitae iste, eligendi sequi recusandae illo!
-    button Cambiar tema
-  
-  hr
-  footerLorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quisquam! Nostrum voluptatibus optio, error sunt molestiae ullam sequi, quae deserunt, mollitia delectus nam illum earum culpa laborum nesciunt quia veniam!
-  script src="script.js"
+          div.photo-card
+            img(src="/assets/amigos-gatos.jpg" alt="Amigos Gatos")
+            div.photo-overlay
+              div.photo-info
+                h3 Aventura Gatuna
+                p @sofia_gatos
+              div.photo-actions
+                button(aria-label="Me gusta")
+                  i.ph.ph-heart
+
+          div.photo-card
+            img(src="/assets/Amigos Playa.jpg" alt="Amigos en la playa")
+            div.photo-overlay
+              div.photo-info
+                h3 Amanecer Especial
+                p @sebafotos
+              div.photo-actions
+                button(aria-label="Me gusta")
+                  i.ph.ph-heart
+
+          div.photo-card
+            img(src="/assets/Duo Amigos.jpg" alt="Retrato de un duo de amigos")
+            div.photo-overlay
+              div.photo-info
+                h3 Luces de Neón
+                p @night_walker
+              div.photo-actions
+                button(aria-label="Me gusta")
+                  i.ph.ph-heart
+
+          div.photo-card
+            img(src="/assets/Walter White.jpg" alt="Fotografia de Walter White")
+            div.photo-overlay
+              div.photo-info
+                h3 Los Angeles, California
+                p @nature_lover
+              div.photo-actions
+                button(aria-label="Me gusta")
+                  i.ph.ph-heart
+ 
+          div.photo-card
+            img(src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" alt="Bosque verde")
+            div.photo-overlay
+              div.photo-info
+                h3 Bosque Encantado
+                p @green_life
+              div.photo-actions
+                button(aria-label="Me gusta")
+                  i.ph.ph-heart
+          // Photo 6
+          div.photo-card
+            img(src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80&w=800" alt="Montañas")
+            div.photo-overlay
+              div.photo-info
+                h3 Aventura
+                p @explorer
+              div.photo-actions
+                button(aria-label="Me gusta")
+                  i.ph.ph-heart
+
+    footer.footer
+      p &copy; 2026 Fotaza. Todos los derechos reservados.
+      
+    script(src="/js/main.js")
