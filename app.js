@@ -5,8 +5,7 @@ app.set('view engine', 'pug');
 
 
 app.get('/', (req, res) => {
-  console.log('Hola mundo');
-  console.log('Funcionaa');
+
 
   res.render('index.pug');
 });
