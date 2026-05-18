@@ -1,0 +1,13 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+title Fotaza
+form#form-register(action='*')
+  label(for='nombre') Nombre:
+  input#nombre(type='text' name='nombre-usuario' placeholder='Ej: Juan Perez')
+  label(for='correo') Correo:
+  input#correo(type='email' name='correo-usuario' placeholder='EJ: correo123@gmail.com')
+  label(for='password') Contrasena:
+  input#password(type='password' name='password-usuario' placeholder='EJ: Contraseña-Fuerte123')
+  button(type='submit') Registrarse
