@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Lautaro-10/Proyecto-Fotaza-2#readme",
   "dependencies": {
     "express": "^5.2.1",
+    "mysql2": "^3.22.3",
     "pug": "^3.0.4"
   },
   "devDependencies": {
