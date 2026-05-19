@@ -5,8 +5,6 @@ app.set('view engine', 'pug');
 
 
 app.get('/', (req, res) => {
-
-
   res.render('index.pug');
 });
 
@@ -19,6 +17,7 @@ app.listen(PORT, () => {
   console.log(`Servidor corriendo en http:\\localhost:${PORT}`);
 });
 
+// Routes  //    
 app.get('/register', (req, res) => {
   res.render('register.pug');
 });

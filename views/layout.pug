@@ -1,0 +1,34 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block title
+      title Fotaza
+      
+    // Google Fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet")
+    // Phosphor Icons
+    script(src="https://unpkg.com/@phosphor-icons/web")
+    // Custom CSS
+    link(rel="stylesheet" href="/css/style.css")
+    
+  body
+    header.header
+      a.logo(href="/") Fotaza.
+      nav.nav-links
+        a.nav-link(href="/posts") Mis fotos
+        a.nav-link(href="/our_story") Sobre Nosotros
+        a.nav-link(href="/followers") Seguidores
+        a.nav-link(href="/register") Registrarse
+      button#theme-toggle.theme-toggle(aria-label="Cambiar tema")
+        i.ph.ph-moon
+        
+    block content
+        
+    footer.footer
+      p &copy; 2026 Fotaza. Todos los derechos reservados.
+      
+    script(src="/js/main.js")

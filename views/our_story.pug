@@ -1,8 +1,16 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Fotaza 
-  body 
-    h1 Esta sera la pagina , que explique brevemente la empresa ficticia detras de Fotaza 
+extends layout.pug
+
+block title
+  title Sobre Nosotros - Fotaza
+
+block content
+  main.hero.animate-fade-in(style="text-align: left; max-width: 800px; margin: 0 auto;")
+    h1.our_story_title() Nuestra Historia
+    
+    p.our_story_paragraph() Todo comenzó en 2024, en un pequeño estudio en San Luis. Un grupo de amigos apasionados por la fotografía se dio cuenta de algo triste: las redes sociales modernas ya no trataban sobre el arte de capturar momentos, sino sobre algoritmos, anuncios y viralidad extrema. Las verdaderas obras de arte se perdían en un mar de distracciones.
+    
+    p.our_story_paragraph() Por eso decidimos crear <strong>Fotaza</strong>. Nuestro objetivo era simple pero ambicioso: construir un refugio digital donde la imagen volviera a ser la única protagonista. Un lugar diseñado meticulosamente por fotógrafos, para fotógrafos. 
+    
+    p.our_story_paragraph() No importa si usas una cámara profesional de última generación o simplemente el lente de tu teléfono móvil durante un paseo de domingo; en Fotaza creemos que cada perspectiva es única. Aquí, lo único que importa es la historia, la luz y la emoción detrás de cada captura.
+      
+    p.our_story_paragraph() Hoy, somos una comunidad en crecimiento de mentes creativas. Creemos firmemente en la inspiración mutua, el respeto y en descubrir la belleza del mundo a través de un lente. ¡Gracias por ser parte de este viaje visual con nosotros!
