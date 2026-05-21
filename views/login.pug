@@ -5,20 +5,15 @@ block title
 
 block content
   main.hero.animate-fade-in(style="max-width: 500px; margin: 0 auto;")
-    h1 Únete a Fotaza
-    p Inicia Sesiòn en tu cuenta para entrar a la mejor aplicacion de fotografia.
+    h1 Iniciar Sesion en Fotaza
+    p  Inicia Sesion en tu cuenta para entrar a la mejor aplicacion de fotografia de la web!.
+    hr
     
     form#form-register(action='/register', method="POST")
-      label.form_label(for='nombre_registro') Nombre:
-      input#nombre_registro.form_input(type='text' name='nombre-usuario' placeholder='Ej: Juan')
-
-      label.form_label(for='apellido_registro') Apellido:
-      input#apellido_registro.form_input(type='text' name='apellido-usuario' placeholder='Ej: Perez')
-      
-      label.form_label(for='correo_registro') Correo:
+      label.form_label(for='correo_registro') Correo Electronico
       input#correo_registro.form_input(type='email' name='correo-usuario' placeholder='EJ: correo123@gmail.com')
       
-      label.form_label(for='password_registro') Contraseña:
+      label.form_label(for='password_registro') Contraseña
       input#password_registro.form_input(type='password' name='password-usuario' placeholder='EJ: Contraseña-Fuerte123')
       
-      button.btn-primary(type='submit' style="margin-top: 1rem;") Registrarse
+      button.btn-primary(type='submit' style="margin-top: 1rem; font-size: 15px") Iniciar Sesion

@@ -9,18 +9,18 @@ block content
     p Crea tu cuenta para empezar a compartir tus mejores fotos.
     
     form#form-register(action='/register', method="POST")
-      label.form_label(for='apodo_registro') Nombre de Usuario (Apodo):
+      label.form_label(for='apodo_registro') Nombre de Usuario (Apodo)
       input#apodo_registro.form_input(type='text' name='apodo-usuario' placeholder='Ej: JuanPerez123')
-      label.form_label(for='nombre_registro') Nombre:
+      label.form_label(for='nombre_registro') Nombre
       input#nombre_registro.form_input(type='text' name='nombre-usuario' placeholder='Ej: Juan')
 
-      label.form_label(for='apellido_registro') Apellido:
+      label.form_label(for='apellido_registro') Apellido
       input#apellido_registro.form_input(type='text' name='apellido-usuario' placeholder='Ej: Perez')
       
-      label.form_label(for='correo_registro') Correo:
+      label.form_label(for='correo_registro') Correo Electronico
       input#correo_registro.form_input(type='email' name='correo-usuario' placeholder='EJ: correo123@gmail.com')
       
-      label.form_label(for='password_registro') Contraseña:
+      label.form_label(for='password_registro') Contraseña
       input#password_registro.form_input(type='password' name='password-usuario' placeholder='EJ: Contraseña-Fuerte123')
       
       button.btn-primary(type='submit' style="margin-top: 1rem;") Registrarse

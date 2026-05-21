@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/our_story', (req, res) => {
+router.get('/', (req, res) => {
   res.render('our_story.pug');
 });
 
