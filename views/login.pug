@@ -1,16 +1,14 @@
 extends layout.pug
 
 block title
-  title Registro - Fotaza
+  title Login - Fotaza
 
 block content
   main.hero.animate-fade-in(style="max-width: 500px; margin: 0 auto;")
     h1 Únete a Fotaza
-    p Crea tu cuenta para empezar a compartir tus mejores fotos.
+    p Inicia Sesiòn en tu cuenta para entrar a la mejor aplicacion de fotografia.
     
     form#form-register(action='/register', method="POST")
-      label.form_label(for='apodo_registro') Nombre de Usuario (Apodo):
-      input#apodo_registro.form_input(type='text' name='apodo-usuario' placeholder='Ej: JuanPerez123')
       label.form_label(for='nombre_registro') Nombre:
       input#nombre_registro.form_input(type='text' name='nombre-usuario' placeholder='Ej: Juan')
 
