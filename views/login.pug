@@ -9,11 +9,15 @@ block content
     p  Inicia Sesion en tu cuenta para entrar a la mejor aplicacion de fotografia de la web!.
     hr
     
-    form#form-register(action='/register', method="POST")
-      label.form_label(for='correo_registro') Correo Electronico
+    form#form-register(action='/login', method='POST')
+      label.form_label(for='correo_registro') Correo Electrónico o Nombre de Usuario
       input#correo_registro.form_input(type='email' name='correo-usuario' placeholder='EJ: correo123@gmail.com')
       
       label.form_label(for='password_registro') Contraseña
       input#password_registro.form_input(type='password' name='password-usuario' placeholder='EJ: Contraseña-Fuerte123')
       
-      button.btn-primary(type='submit' style="margin-top: 1rem; font-size: 15px") Iniciar Sesion
+      button.btn-primary#btn-submit-login(type='submit' style="margin-top: 1rem; font-size: 15px") Iniciar Sesion
+
+      div.password_reset ¿Olvidaste tu Contraseña?
+
+      button#btn-crear-cuenta(type="button" style="" ) Crear Cuenta 

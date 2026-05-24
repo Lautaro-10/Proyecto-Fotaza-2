@@ -7,6 +7,7 @@ block content
   main.hero.animate-fade-in(style="max-width: 500px; margin: 0 auto;")
     h1 Únete a Fotaza
     p Crea tu cuenta para empezar a compartir tus mejores fotos.
+    hr
     
     form#form-register(action='/register', method="POST")
       label.form_label(for='apodo_registro') Nombre de Usuario (Apodo)
@@ -17,7 +18,7 @@ block content
       label.form_label(for='apellido_registro') Apellido
       input#apellido_registro.form_input(type='text' name='apellido-usuario' placeholder='Ej: Perez')
       
-      label.form_label(for='correo_registro') Correo Electronico
+      label.form_label(for='correo_registro') Correo Electrónico
       input#correo_registro.form_input(type='email' name='correo-usuario' placeholder='EJ: correo123@gmail.com')
       
       label.form_label(for='password_registro') Contraseña

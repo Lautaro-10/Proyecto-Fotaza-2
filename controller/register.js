@@ -2,7 +2,7 @@ const express = require('express');
 const User = require('../models/User');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+  router.get('/', (req, res) => {
   res.render('register.pug');
 });
 
@@ -29,5 +29,4 @@ router.post('/', async (req, res) => {
     res.send('No se pudo guardar el usuario');
   }
 });
-
 module.exports = router;

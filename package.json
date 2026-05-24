@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "devStart": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "db:init": "database.sql"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/Lautaro-10/Proyecto-Fotaza-2#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mysql2": "^3.22.3",
     "pug": "^3.0.4"

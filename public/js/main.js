@@ -27,3 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const boton_crear_cuenta = document.getElementById('btn-crear-cuenta');
+
+boton_crear_cuenta.addEventListener('click', () =>{
+alert('¡¡Recuerde que debe tener mas de 16 años para crear una cuenta..¡¡');
+});
+
+

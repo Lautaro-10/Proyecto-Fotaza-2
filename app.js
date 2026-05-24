@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const db = require('./config/db');
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', indexRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);
+
 app.use('/followers', followersRouter);
 app.use('/our_story', our_storyRouter);
 app.use('/posts', postsRouter);
