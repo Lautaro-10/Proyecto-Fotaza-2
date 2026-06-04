@@ -19,13 +19,21 @@ html(lang="es")
     header.header
       a.logo(href="/") Fotaza.
       nav.nav-links
-        a.nav-link(href="/login") Iniciar Sesion
-        //a.nav-link(href="/posts") Mis fotos
-        a.nav-link(href="/our_story") Sobre Nosotros
-        //a.nav-link(href="/followers") Seguidores
-
-      button#theme-toggle.theme-toggle(aria-label="Cambiar tema")
-        i.ph.ph-moon
+        a.nav-link(href="/posts") Mis Publicaciones
+        if usuarioId
+          a.nav-link(href="/followers") Seguidores
+          a.nav-link(href="/our_story") Sobre Nosotros
+          
+      div(style="display: flex; gap: 1rem; align-items: center;")
+        if usuarioId
+          span(style="color: var(--text-color); font-weight: 500;") ¡Hola, #{usuarioNombre}!
+          a.btn-secondary(href="/logout") Cerrar Sesión
+        else
+          a.btn-primary(href="/login") Entrar
+          a.btn-primary(href="/register") Registrarse
+          
+        button#theme-toggle.theme-toggle(aria-label="Cambiar tema")
+          i.ph.ph-moon
         
     block content
         
