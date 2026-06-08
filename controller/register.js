@@ -1,5 +1,5 @@
 const express = require('express');
-const Usuario = require('../models/Usuario');
+const { Usuario } = require('../models/index');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -19,7 +19,6 @@ router.post('/', async (req, res) => {
     
     console.log('¡Usuario guardado con éxito y contraseña encriptada!');
     
-    // Auto-login
     req.session.usuarioId = nuevoUsuario.id_usuario;
     req.session.usuarioNombre = nuevoUsuario.nombre;
     
