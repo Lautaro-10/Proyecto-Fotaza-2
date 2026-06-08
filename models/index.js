@@ -11,7 +11,10 @@ Publicacion.hasMany(Imagen, { foreignKey: 'id_publicacion' });
 Imagen.belongsTo(Publicacion, { foreignKey: 'id_publicacion' });
 
 Publicacion.hasMany(Comentario, { foreignKey: 'id_publicacion'});
-Comentario.belongsTo(Publicacion, {foreignKey: 'id_publicacion'})
+Comentario.belongsTo(Publicacion, {foreignKey: 'id_publicacion'});
+
+Usuario.hasMany(Comentario, { foreignKey: 'id_usuario' });
+Comentario.belongsTo(Usuario, { foreignKey: 'id_usuario' });
 
 module.exports = {
   sequelize,

@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { correo, password } = req.body;
+  const correo = req.body['correo-usuario'];
+  const password = req.body['password-usuario'];
   
   try {
     const usuario = await Usuario.findOne({ where: { email: correo } });

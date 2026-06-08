@@ -1,9 +1,18 @@
 extends layout.pug
 
-block title
-  title Mis Fotos - Fotaza
-
 block content
   main.hero.animate-fade-in
     h1 Mis Fotos
     p La siguiente página mostrará tus fotos subidas.
+    if publicaciones && publicaciones.length > 0
+      each pub in publicaciones
+        div(style="border: 1px solid #ccc; margin-bottom: 2rem; padding: 1rem; border-radius: 8px;")
+          h2= pub.titulo
+          p= pub.descripcion
+          
+          if pub.Imagens && pub.Imagens.length > 0
+            div.galeria-imagenes
+              each img in pub.Imagens
+                img(src=img.ruta_archivo, alt="Mi foto", style="max-width: 75%; border-radius: 8px;")
+    else
+      p Aún no has subido ninguna foto. ¡Anímate a crear tu primera publicación!

@@ -17,7 +17,7 @@ const Publicacion = sequelize.define('Publicacion', {
   },
 }, {
   tableName: 'publicaciones',
-  timestamps: true, 
+  timestamps: false, 
 });
 
 module.exports = Publicacion;

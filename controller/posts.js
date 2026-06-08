@@ -11,8 +11,17 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get('/', (req, res) => {
-  res.render('posts.pug');
+router.get('/', async(req, res) => {
+try{
+  const misPublicaciones = await Publicacion.findAll({
+    where: { id_usuario: req.session.usuarioId },
+    include: [Imagen]
+  });
+  res.render('posts.pug', { publicaciones: misPublicaciones });
+}catch(error){
+  console.error("Error al buscar publicaciones:", error);
+  res.send('Error interno del servidor');
+}
 });
 
 router.get('/crear', (req, res) => {

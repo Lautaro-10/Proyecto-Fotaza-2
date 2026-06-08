@@ -7,10 +7,13 @@ id_comentario:{
   primaryKey: true,
   autoIncrement: true
 },
- comentario:{
+  comentario: {
     type: DataTypes.STRING(255),
     allowNull: false
   }
+}, {
+  tableName: 'comentarios',
+  timestamps: false
 });
 
 

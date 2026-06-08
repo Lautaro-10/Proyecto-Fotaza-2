@@ -8,24 +8,23 @@ block content
     h1 Subir Nueva Foto
     p Comparte tus momentos con el mundo.
     
-    form#form-post(action='/posts/crear', method="POST", enctype="multipart/form-data", style="background: var(--card-bg); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow);")
-      
-        label.form_label(for='titulo') Título:
-        input#titulo.form_input(type='text' name='titulo' placeholder='Ej: Atardecer en las montañas' required)
-      
-        label.form_label(for='descripcion') Descripción (Opcional):
-        textarea#descripcion.form_input(name='descripcion' rows='3' placeholder='Cuenta la historia detrás de la foto...')
-      
-        label.form_label(for='licencia') Licencia:
-        select#licencia.form_input(name='licencia')
-        option(value='Sin Copyright') Sin Copyright (Dominio Público)
-        option(value='Con Copyright') Con Copyright (Protegida)
+    form#form-post(action='/posts/crear', method="POST", enctype="multipart/form-data", style="background: var(--card-bg); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow);")  
+      label.form_label(for='titulo') Título:
+      input#titulo.form_input(type='text' name='titulo' placeholder='Ej: Atardecer en las montañas' required)
     
-        label.form_label(for="marca_agua")
-        input(type='text' name='marca_agua')
-        span Añadir marca de agua de protección
+      label.form_label(for='descripcion') Descripción (Opcional):
+      textarea#descripcion.form_input(name='descripcion' rows='3' placeholder='Cuenta la historia detrás de la foto...')
     
-        label.form_label(for='foto') Seleccionar Imagen:
-        input#foto.form_input(type='file' name='foto' accept='image/*' required style="padding: 1rem; border: 2px dashed var(--primary-color); cursor: pointer;")
+      label.form_label(for='licencia') Licencia:
+      select#licencia.form_input(name='licencia')
+      option(value='Sin Copyright') Sin Copyright (Dominio Público)
+      option(value='Con Copyright') Con Copyright (Protegida)
+  
+      label.form_label(for="marca_agua")
+      input(type='text' name='marca_agua')
+      span Añadir marca de agua de protección
+  
+      label.form_label(for='foto') Seleccionar Imagen:
+      input#foto.form_input(type='file' name='foto' accept='image/*' required style="padding: 1rem; border: 2px dashed var(--primary-color); cursor: pointer;")
       
       button.btn-primary(type='submit' style="width: 100%;") Publicar Foto
