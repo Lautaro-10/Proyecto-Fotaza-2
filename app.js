@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
-const sequelize = require('./config/db');
+const { sequelize } = require('./models/index');
 
 const app = express();
 
@@ -13,6 +13,8 @@ const our_storyRouter = require('./controller/our_story');
 const postsRouter = require('./controller/posts');
 
 app.set('view engine', 'pug');
+
+
 
 // Middle Ware
 app.use(express.static('public'));
