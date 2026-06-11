@@ -27,6 +27,11 @@ html(lang="es")
           a.nav-link(href="/our_story") Sobre Nosotros
           
       div(style="display: flex; gap: 1rem; align-items: center;")
+        form(action="/buscar" method="GET" style="display: flex; align-items: center;")
+          input.form_input(type="search" name="q" placeholder="Buscar fotos..." required style="padding: 0.3rem 0.5rem; border-radius: 20px; border: 1px solid var(--border-color); width: 200px;")
+          button(type="submit" aria-label="Buscar" style="background: none; border: none; cursor: pointer; margin-left: -30px; color: var(--text-color);")
+            i.ph.ph-magnifying-glass
+            
         if usuarioId
           span(style="color: var(--text-color); font-weight: 500;") ¡Hola, #{usuarioNombre}!
           a.btn-secondary(href="/logout") Cerrar Sesión
