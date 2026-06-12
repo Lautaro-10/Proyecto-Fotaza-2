@@ -17,12 +17,11 @@ block content
     
       label.form_label(for='licencia') Licencia:
       select#licencia.form_input(name='licencia')
-      option(value='Sin Copyright') Sin Copyright (Dominio Público)
-      option(value='Con Copyright') Con Copyright (Protegida)
-  
-      label.form_label(for="marca_agua")
-      input(type='text' name='marca_agua')
-      span Añadir marca de agua de protección
+        option(value='Sin Copyright') Sin Copyright (Dominio Público)
+        option(value='Con Copyright') Con Copyright (Protegida)
+
+      label.form_label(for="marca_agua") Añadir marca de agua de protección
+      input#marca_agua.form_input(type='text' name='marca_agua' placeholder='Ej: © 2026 Mi Nombre')
   
       label.form_label(for='foto') Seleccionar Imagen:
       input#foto.form_input(type='file' name='foto' accept='image/*' required style="padding: 1rem; border: 2px dashed var(--primary-color); cursor: pointer;")
