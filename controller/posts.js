@@ -50,7 +50,8 @@ router.post('/:id/comentar', async (req, res) => {
       id_publicacion: req.params.id,
       id_usuario: req.session.usuarioId
     });
-    res.redirect('/posts');
+    const backURL = req.get('referer') || '/posts';
+    res.redirect(backURL);
   } catch (error) {
     console.error(error);
     res.send('Error al guardar comentario');
@@ -77,7 +78,8 @@ router.post('/:id/valorar', async (req, res) => {
       });
     }
     
-    res.redirect('/posts');
+    const backURL = req.get('referer') || '/posts';
+    res.redirect(backURL);
   } catch (error) {
     console.error(error);
     res.send('Error al guardar valoración');

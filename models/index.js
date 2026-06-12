@@ -5,6 +5,7 @@ const Imagen = require('./Imagen');
 const Comentario = require('./Comentario');
 
 const Valoracion = require('./Valoracion');
+const Seguidor = require('./Seguidor');
 
 Usuario.hasMany(Publicacion, { foreignKey: 'id_usuario' });
 Publicacion.belongsTo(Usuario, { foreignKey: 'id_usuario' });
@@ -24,11 +25,15 @@ Valoracion.belongsTo(Publicacion, { foreignKey: 'id_publicacion' });
 Usuario.hasMany(Valoracion, { foreignKey: 'id_usuario' });
 Valoracion.belongsTo(Usuario, { foreignKey: 'id_usuario' });
 
+Usuario.belongsToMany(Usuario, { as: 'Seguidores', through: Seguidor, foreignKey: 'id_seguido', otherKey: 'id_seguidor' });
+Usuario.belongsToMany(Usuario, { as: 'Siguiendo', through: Seguidor, foreignKey: 'id_seguidor', otherKey: 'id_seguido' });
+
 module.exports = {
   sequelize,
   Usuario,
   Publicacion,
   Imagen,
   Comentario,
-  Valoracion
+  Valoracion,
+  Seguidor
 };
