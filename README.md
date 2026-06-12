@@ -43,13 +43,13 @@ Esto creará automáticamente los siguientes usuarios en tu base de datos:
 
 ## Enlaces Importantes
 - **Repositorio de GitHub:** https://github.com/Lautaro-10/Proyecto-Fotaza-2
-- **Enlace del Deploy (Railway):** [Colocar enlace aquí]
-- **Video Demostrativo (3 min):** [Colocar enlace aquí]
+- **Enlace del Deploy (Railway):** 
+- **Video Demostrativo (3 min):**
 
 ---
 
 ### Notas de Desarrollo y Problemas Encontrados
-**Errores de NPM en Windows:** Al arrancar, renegué bastante porque la terminal me tiraba errores de red y de certificados SSL al querer instalar los módulos con `npm install`. Después de buscar un rato, logré destrabarlo desactivando temporalmente la validación estricta de SSL en la configuración de npm (`npm config set strict-ssl false`) para que me dejara bajar las librerías.
+*  **Errores de NPM en Windows:** Al arrancar, renegué bastante porque la terminal me tiraba errores de red y de certificados SSL al querer instalar los módulos con `npm install`. Después de buscar un rato, logré destrabarlo desactivando temporalmente la validación estricta de SSL en la configuración de npm (`npm config set strict-ssl false`) para que me dejara bajar las librerías.
 *   **Las imágenes desaparecían en el deploy (Railway):** En mi computadora las fotos se subían y se guardaban perfecto en la carpeta `/public/uploads`. El problema fue que al subir el proyecto a Railway, las imágenes se borraban solas cada vez que el servidor se reiniciaba o hacía un cambio. Resulta que estas plataformas gratuitas no guardan archivos locales de forma permanente. Para esta entrega el sistema funciona perfecto localmente, pero entiendo que la solución definitiva a futuro sería cambiar Multer para que guarde las fotos en la nube (como Cloudinary o AWS S3).
 
 *   **El script de arranque `db:init`:** Un requisito estricto era inicializar las tablas usando el comando `npm run db:init`. Al principio intenté poner mi archivo `.sql` directamente en el `package.json`, pero tiraba error porque la consola no lo reconocía. Lo terminé solucionando al crear un archivo intermedio en Node (`initDB.js`) que lee mi archivo de base de datos usando el módulo `fs` y ejecuta las consultas conectándose mediante las variables ocultas en el `.env`.
