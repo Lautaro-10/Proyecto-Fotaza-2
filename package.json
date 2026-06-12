@@ -6,7 +6,7 @@
   "scripts": {
     "devStart": "nodemon app.js",
     "start": "node app.js",
-    "db:init": "db.js"
+    "db:init": "node seed.js"
   },
   "repository": {
     "type": "git",
