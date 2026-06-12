@@ -1,9 +1,30 @@
 extends layout.pug
 
-block title
-  title Seguidores - Fotaza
-
 block content
   main.hero.animate-fade-in
-    h1 Seguidores
-    p Esta será la página de Seguidores. Aquí podrás ver quién te sigue y a quién sigues.
+    h1 Red de Contactos
+    p Aquí puedes ver a quién sigues y quién te sigue.
+    
+    div(style="display: flex; gap: 2rem; margin-top: 2rem;")
+      
+      div(style="flex: 1; background: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);")
+        h2(style="margin-bottom: 1rem;") Siguiendo (#{usuarioLogueado.Siguiendo ? usuarioLogueado.Siguiendo.length : 0})
+        if usuarioLogueado.Siguiendo && usuarioLogueado.Siguiendo.length > 0
+          ul(style="list-style: none; padding: 0;")
+            each seguido in usuarioLogueado.Siguiendo
+              li(style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;")
+                strong @#{seguido.username}
+                form(action=`/followers/dejar-seguir/${seguido.id_usuario}` method="POST")
+                  button.btn-secondary(type="submit" style="padding: 0.3rem 0.8rem; font-size: 0.8rem;") Dejar de Seguir
+        else
+          p(style="color: #666; font-style: italic;") No sigues a nadie aún.
+
+      div(style="flex: 1; background: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);")
+        h2(style="margin-bottom: 1rem;") Mis Seguidores (#{usuarioLogueado.Seguidores ? usuarioLogueado.Seguidores.length : 0})
+        if usuarioLogueado.Seguidores && usuarioLogueado.Seguidores.length > 0
+          ul(style="list-style: none; padding: 0;")
+            each seguidor in usuarioLogueado.Seguidores
+              li(style="margin-bottom: 1rem;")
+                strong @#{seguidor.username}
+        else
+          p(style="color: #666; font-style: italic;") Aún no tienes seguidores.
